@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            },
+        };
+    </script>
+
+    <!-- Inter Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+
+    <title>Single Article | Generic — Minimal Tailwind CSS Blog Template | alnahian2003</title>
+</head>
+
+<body class="antialiased bg-zinc-900">
+    <!-- BG Gradient  -->
+    <div class="absolute inset-0 mx-0 overflow-hidden -z-10 max-w-none">
+        <div
+            class="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] [mask-image:linear-gradient(white,transparent)] z-[-100] overflow-visible">
+            <div
+                class="absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] from-[#36b49f]/30 to-[#DBFF75]/30 opacity-100">
+                <svg aria-hidden="true"
+                    class="absolute inset-x-0 inset-y-[-50%] h-[200%] w-full skew-y-[-18deg] fill-black/40 stroke-black/50 mix-blend-overlay stroke-white/5">
+                    <defs>
+                        <pattern id=":S1:" width="72" height="56" patternUnits="userSpaceOnUse" x="-12" y="4">
+                            <path d="M.5 56V.5H72" fill="none"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" stroke-width="0" fill="url(#:S1:)"></rect>
+                    <svg x="-12" y="4" class="overflow-visible">
+                        <rect stroke-width="0" width="73" height="57" x="288" y="168"></rect>
+                        <rect stroke-width="0" width="73" height="57" x="144" y="56"></rect>
+                        <rect stroke-width="0" width="73" height="57" x="504" y="168"></rect>
+                        <rect stroke-width="0" width="73" height="57" x="720" y="336"></rect>
+                    </svg>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header
+        class="inset-x-0 top-0 z-50 shadow-sm lg:static lg:overflow-y-visible backdrop-blur bg-zinc-900/20 ring-1 lg:flex text-zinc-400 ring-white/10">
+        <div class="w-full px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="relative flex flex-row items-center justify-between gap-6 lg:gap-8">
+                <!-- Logo -->
+                <div class="flex items-center justify-start">
+                    <div class="flex items-center flex-shrink-0">
+                        <a href="/index.html">
+                            <img class="block w-auto h-10"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=emerald&shade=600" alt="Logo" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Box -->
+                <div class="flex-grow min-w-0 px-0">
+                    <div class="flex items-center px-0 py-4 mx-auto">
+                        <form class="w-full" action="/" method="GET">
+                            <label for="search" class="sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <!-- Search Icon -->
+                                    <svg class="w-5 h-5 text-zinc-400" viewBox="0 0 20 20" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <input id="search" name="query"
+                                    class="block w-full py-3 pl-10 pr-3 text-lg transition border-0 rounded-full placeholder:text-zinc-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-2xl sm:leading-6 ring-1 ui-not-focus-visible:outline-none lg:flex bg-white/5 text-zinc-400 ring-inset ring-white/10 hover:ring-white/20"
+                                    placeholder="Search" type="search" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full px-4 py-20 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <!-- Container -->
+        <div class="w-full mx-auto max-w-7xl">
+            <a class="inline-flex items-center justify-center gap-2 px-3 py-1 mb-6 text-lg font-medium transition rounded-full ring-1 ring-inset text-zinc-400 ring-white/10 hover:bg-white/5 hover:text-white"
+                href="/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                    <path fill-rule="evenodd"
+                        d="M7.793 2.232a.75.75 0 0 1-.025 1.06L3.622 7.25h10.003a5.375 5.375 0 0 1 0 10.75H10.75a.75.75 0 0 1 0-1.5h2.875a3.875 3.875 0 0 0 0-7.75H3.622l4.146 3.957a.75.75 0 0 1-1.036 1.085l-5.5-5.25a.75.75 0 0 1 0-1.085l5.5-5.25a.75.75 0 0 1 1.06.025Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+                Back
+            </a>
+            <article
+                class="w-full rounded-xl p-6 md:p-10 text-white shadow-lg bg-zinc-900/20 ring-1 backdrop-blur-[2px] ring-white/15 space-y-6">
+                <!-- Main Content -->
+                <div>
+                    <!-- Article Title -->
+                    <h3 class="mb-4 text-xl font-bold sm:text-4xl lg:text-6xl text-center !leading-tight">
+                        I Solved a Mystery (and Almost Burned Down My Kitchen)
+                    </h3>
+
+                    <!-- Meta Info -->
+                    <div
+                        class="flex flex-row flex-wrap items-center justify-center gap-4 my-6 text-center divide-x divide-zinc-700">
+                        <!-- Author Info -->
+                        <div class="flex items-center gap-2">
+                            <img class="w-8 h-8 p-0.5 rounded-full ring-1 ring-emerald-500"
+                                src="https://avatars.githubusercontent.com/u/61485238?v=4" alt="Al Nahian" />
+                            <h4>Al Nahian</h4>
+                        </div>
+
+
+                        <!-- Date -->
+                        <p class="pl-4 text-lg font-semibold sm:text-base text-zinc-400">
+                            4 months ago
+                        </p>
+
+                        <!-- Category Pill -->
+                        <div class="pl-4">
+                            <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm sm:text-base font-medium transition rounded-full py-1 px-3 bg-emerald-400/10 text-emerald-400 ring-1 ring-inset ring-emerald-400/20 hover:bg-emerald-400/10 hover:text-emerald-300 hover:ring-emerald-300"
+                                href="/#">Technology</a>
+                        </div>
+
+                        <!-- View Count Pill -->
+                        <div class="px-4">
+                            <div class="inline-flex items-center justify-center gap-1 px-3 py-1 overflow-hidden text-sm font-medium text-orange-400 transition rounded-full sm:text-base bg-orange-400/10 ring-1 ring-inset ring-orange-400/20"
+                                href="/#">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="size-5">
+                                        <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                        <path fill-rule="evenodd"
+                                            d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span> 1,253 Views
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="h-px my-8 border-0 bg-zinc-700">
+
+                    <!-- Post Body -->
+                    <p class="text-base font-normal text-zinc-400 md:text-xl">
+
+                        Let me preface this with the fact I'm not exactly known for my culinary skills. My smoke
+                        detector chirps more at burnt toast than culinary masterpieces. So, when a strange scratching
+                        sound started emanating from my rarely-used toaster oven, my first thought wasn't a gourmet
+                        rodent on the loose, but a rogue appliance possessed by mischievous kitchen gremlins.
+
+                        <br>
+                        <br>
+
+                        The scratching grew louder, accompanied by the telltale thump of something small bouncing off
+                        the metal interior. Panic clawed its way up my throat. Was it a monstrous spider building an egg
+                        sac? A colony of rogue ants taking up residence in the heating element? Armed with a spatula (my
+                        weapon of choice) and a healthy dose of trepidation, I cautiously unplugged the oven and flipped
+                        it upside down.
+
+                        <br>
+                        <br>
+
+                        Nothing. Just a shower of rogue crumbs and a faint metallic clatter from beneath the appliance.
+                        Mentally preparing myself for the worst (and picturing myself explaining the fire to my
+                        landlord), I wrestled the heavy oven onto the counter. With a deep breath, I unscrewed the back
+                        panel, revealing... a tiny ball of brown fur nestled amongst the wires.
+
+                        <br>
+                        <br>
+
+                        My heart did a double take. This wasn't a monstrous spider or a legion of ants. It was a
+                        hamster. A decidedly fluffy, but slightly singed, hamster. Relief washed over me so strong I
+                        almost laughed. Apparently, the neighbor's new pet had escaped its cage and, in a quest for
+                        adventure (or maybe a tasty crumb), ended up in my rarely-used appliance.
+
+                        <br>
+                        <br>
+
+                        After a tense five minutes of coaxing with a rogue carrot and a shoebox trap, the little escape
+                        artist was safely (and somewhat grumpily) reunited with its owner. My kitchen may have smelled
+                        faintly of burnt fur for a while, and I may have sworn off using the toaster oven for the
+                        foreseeable future, but hey, at least I can now add "hamsterslayer" (emphasis on the
+                        not-slaying) to my dubious skillset.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>
